@@ -49,6 +49,15 @@ Expected result:
 - Saves a small seaborn heatmap artifact to `outputs/prep/cuda_smoke_heatmap.png`.
 - Uses the GPU for a tiny tensor operation when CUDA is available.
 
+Validated locally on 2026-05-31:
+
+- Python: `3.12.0`
+- PyTorch: `2.11.0+cu128`
+- CUDA available: `True`
+- GPU: `NVIDIA GeForce RTX 4070 SUPER`
+- CUDA runtime: `12.8`
+- Artifact: `outputs/prep/cuda_smoke_heatmap.png`
+
 ## Project structure
 
 ```text
