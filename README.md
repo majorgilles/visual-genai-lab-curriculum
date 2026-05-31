@@ -56,7 +56,19 @@ Validated locally on 2026-05-31:
 - CUDA available: `True`
 - GPU: `NVIDIA GeForce RTX 4070 SUPER`
 - CUDA runtime: `12.8`
-- Artifact: `outputs/prep/cuda_smoke_heatmap.png`
+- Baseline artifact: `outputs/prep/cuda_smoke_heatmap.png`
+- Parameter-tweak artifact: `outputs/prep/cuda_smoke_heatmap_span6.png`
+
+Human review note for issue #1:
+
+- I inspected both heatmaps and confirmed they render as complete 8×8 seaborn PNG artifacts with color bars and clear titles.
+- I reran the smoke test with a parameter tweak, increasing the demo tensor span from `3` to `6`:
+
+  ```powershell
+  uv run python -m visual_genai_lab.cuda_smoke --span 6 --output outputs/prep/cuda_smoke_heatmap_span6.png
+  ```
+
+- Observation: increasing `--span` changes the sinusoidal pattern substantially while preserving the same tensor shape and CUDA execution path, which confirms the artifact is generated from live PyTorch tensor math rather than a static image.
 
 ## Project structure
 
