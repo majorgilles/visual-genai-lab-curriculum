@@ -1,0 +1,23 @@
+# Python / uv
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Local data and generated artifacts
+/data/*
+!/data/.gitkeep
+/models/*
+!/models/.gitkeep
+/outputs/*
+!/outputs/.gitkeep
+!/outputs/prep/
+!/outputs/prep/.gitkeep
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
