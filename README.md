@@ -1,16 +1,26 @@
 # Visual GenAI Lab
 
-A small **uv + PyTorch** project for learning visual generative AI through official tutorials and human-in-the-loop experiments.
+A small **applied machine learning lab** for learning visual generative AI with **uv + PyTorch**, official tutorials, runnable local code, and human-in-the-loop inspection.
 
-The curriculum starts with a local Windows-native CUDA smoke test, adds two VGG19 image-recognition bridge labs, then moves through official PyTorch generative examples before following the Hugging Face Diffusion Models Course page by page.
+This is an applied ML / visual AI engineering curriculum, not a pure theory track. The focus is the practical loop used in real AI work: prepare inputs, run a model, inspect outputs, tweak one thing, save an artifact, and write down what changed. The curriculum starts with a local Windows-native CUDA smoke test, adds VGG19 image-recognition bridge labs, then moves through official PyTorch generative examples before following the Hugging Face Diffusion Models Course page by page.
 
 ## Goals
 
+- Build practical fluency with the applied ML workflow: input data → model → output artifact → human review note.
 - Use `uv` for reproducible Python project management.
 - Use CUDA-enabled PyTorch locally on an NVIDIA RTX 4070 Super.
+- Learn pretrained-model reuse before deeper generative work: official preprocessing, inference, labels, feature extractors, and visible outputs.
 - Keep every learning issue human-in-the-loop: run it, inspect the outputs, tweak one parameter, and write down what changed.
 - Prefer official sources first: uv, PyTorch, torchvision, Hugging Face, and diffusers docs/tutorials.
 - Produce visible artifacts such as prediction grids, image grids, stylized images, generated samples, and short notes.
+
+## Learning, authorship, and AI assistance
+
+This project is AI-assisted as a learning tool. AI support is used to explore questions and ideas, organize the learning path, and suggest code and notes while studying CNN filters, feature maps, pretrained vision models, and visual generative AI workflows.
+
+Code in this repository is hand-written as part of the learning process, based on AI suggestions, with the exception of some `matplotlib.pyplot` graphing code used to generate visualizations. Written explanations in this repo may be AI-summarized from my prompts, inspection, and learning process; they are not presented as my unaided wording.
+
+The inspiration, direction, and curiosity behind the project are mine. This repo is a vehicle for gaining knowledge about visual ML through inspection, experimentation, and reflection.
 
 ## Setup on Windows PowerShell
 
