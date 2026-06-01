@@ -8,6 +8,7 @@ __pycache__/
 
 # Local data and generated artifacts
 /data/*
+!/data/**/*.jpg
 !/data/.gitkeep
 /models/*
 !/models/.gitkeep
