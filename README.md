@@ -2,8 +2,7 @@
 
 A small **uv + PyTorch** project for learning visual generative AI through official tutorials and human-in-the-loop experiments.
 
-The curriculum starts with a local Windows-native CUDA smoke test, then moves through official PyTorch generative examples
-before following the Hugging Face Diffusion Models Course page by page.
+The curriculum starts with a local Windows-native CUDA smoke test, adds two VGG19 image-recognition bridge labs, then moves through official PyTorch generative examples before following the Hugging Face Diffusion Models Course page by page.
 
 ## Goals
 
@@ -11,7 +10,7 @@ before following the Hugging Face Diffusion Models Course page by page.
 - Use CUDA-enabled PyTorch locally on an NVIDIA RTX 4070 Super.
 - Keep every learning issue human-in-the-loop: run it, inspect the outputs, tweak one parameter, and write down what changed.
 - Prefer official sources first: uv, PyTorch, torchvision, Hugging Face, and diffusers docs/tutorials.
-- Produce visible artifacts such as image grids, stylized images, generated samples, and short notes.
+- Produce visible artifacts such as prediction grids, image grids, stylized images, generated samples, and short notes.
 
 ## Setup on Windows PowerShell
 
@@ -91,12 +90,21 @@ Human review note for issue #1:
 
 1. **Environment smoke test: uv + PyTorch + CUDA on Windows**
    - Sources: official uv docs and official PyTorch Start Locally docs.
-2. **Neural Style Transfer with VGG19**
+2. **Pretrained VGG19 image-recognition inference**
+   - Source: <https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vgg19.html>
+   - GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/17>
+3. **Frozen-feature VGG19 image classifier**
+   - Sources: <https://docs.pytorch.org/tutorials/beginner/transfer_learning_tutorial.html> and <https://docs.pytorch.org/vision/stable/models/generated/torchvision.models.vgg19.html>
+   - GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/18>
+4. **Neural Style Transfer with VGG19**
    - Source: <https://docs.pytorch.org/tutorials/advanced/neural_style_tutorial.html>
-3. **DCGAN image generator**
+   - GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/2>
+5. **DCGAN image generator**
    - Source: <https://docs.pytorch.org/tutorials/beginner/dcgan_faces_tutorial.html>
-4. **VAE latent-space image sampler**
+   - GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/3>
+6. **VAE latent-space image sampler**
    - Source: <https://github.com/pytorch/examples/tree/main/vae>
+   - GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/4>
 
 ### Hugging Face Diffusion Course
 
