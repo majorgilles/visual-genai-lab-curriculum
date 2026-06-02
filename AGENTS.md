@@ -13,6 +13,7 @@ clever abstractions.
 - Target Windows native PowerShell commands in documentation and issues.
 - Keep scripts small and readable.
 - Add Python type hints to new or changed code.
+- Use Google-style docstrings for new or changed Python functions when documenting arguments, returns, or raised errors.
 - Prefer official sources: uv, PyTorch, torchvision, Hugging Face, and diffusers.
 - Do not add classifier-focused curriculum work to the main path.
 - Save generated artifacts under `outputs/` and checkpoints under `models/`.
