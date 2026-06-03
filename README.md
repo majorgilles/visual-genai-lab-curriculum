@@ -79,6 +79,38 @@ Human review note for issue #1:
 
 - Observation: increasing `--span` changes the sinusoidal pattern substantially while preserving the same tensor shape and CUDA execution path, which confirms the artifact is generated from live PyTorch tensor math rather than a static image.
 
+## Prep 4: Neural Style Transfer with VGG19
+
+Source: <https://docs.pytorch.org/tutorials/advanced/neural_style_tutorial.html>  
+GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/2>
+
+Runnable notebook:
+
+```powershell
+uv run jupyter lab notebooks/03_neural_style.ipynb
+```
+
+Artifacts saved:
+
+- `outputs/prep/style_transfer/content_dancing.png`
+- `outputs/prep/style_transfer/style_picasso.png`
+- `outputs/prep/style_transfer/stylized_noise_init.png`
+- `outputs/prep/style_transfer/style_transfer_noise_gallery.png`
+
+Human review note for issue #2:
+
+- I followed the official PyTorch Neural Transfer tutorial closely in `notebooks/03_neural_style.ipynb`.
+- I inspected the content image, style image, generated output, and saved gallery artifact.
+- I used pure noise as the starting `input_img` instead of the tutorial's `content_img.clone()` initialization:
+
+  ```python
+  input_img = torch.randn(content_img.data.size(), device=device)
+  ```
+
+- I also ran a longer optimization pass with `num_steps=600`.
+- Observation: even from random noise, the optimizer recovered recognizable dancer/content structure while adding Picasso-like color and texture patterns. This made the feature-space loss idea concrete: VGG19 acted as a fixed visual judge, while the generated image pixels changed.
+- Decision: the result is good enough to count as a successful neural style transfer artifact for issue #2.
+
 ## Project structure
 
 ```text
