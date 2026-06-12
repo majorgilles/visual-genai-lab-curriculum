@@ -5,6 +5,9 @@ description = "uv + PyTorch lab for learning visual generative AI with official 
 readme = "README.md"
 requires-python = ">=3.12"
 dependencies = [
+    "accelerate>=1.14.0",
+    "datasets>=5.0.0",
+    "diffusers>=0.38.0",
     "matplotlib>=3.9.0",
     "numpy>=2.0.0",
     "pillow>=11.0.0",
@@ -12,6 +15,7 @@ dependencies = [
     "seaborn>=0.13.2",
     "torch>=2.7.0",
     "torchvision>=0.22.0",
+    "transformers>=5.12.0",
 ]
 
 [dependency-groups]
