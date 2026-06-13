@@ -14,6 +14,9 @@ __pycache__/
 !/models/.gitkeep
 /outputs/*
 !/outputs/.gitkeep
+!/outputs/**/
+!/outputs/**/*.png
+!/outputs/**/*.jpg
 !/outputs/prep/
 !/outputs/prep/.gitkeep
 

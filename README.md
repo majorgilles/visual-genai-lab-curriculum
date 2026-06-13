@@ -111,6 +111,34 @@ Human review note for issue #2:
 - Observation: even from random noise, the optimizer recovered recognizable dancer/content structure while adding Picasso-like color and texture patterns. This made the feature-space loss idea concrete: VGG19 acted as a fixed visual judge, while the generated image pixels changed.
 - Decision: the result is good enough to count as a successful neural style transfer artifact for issue #2.
 
+## Hugging Face Diffusion Course Unit 1: Introduction to Diffusers
+
+Source: <https://huggingface.co/learn/diffusion-course/unit1/2>
+
+GitHub issue: <https://github.com/majorgilles/visual-genai-lab-curriculum/issues/7>
+
+Runnable notebook:
+
+```powershell
+uv run jupyter lab notebooks/06_hf_diffusion_unit1_intro.ipynb
+```
+
+Artifacts saved:
+
+- `outputs/hf-course/unit1_generated_samples_seed0_steps100.png`
+- `outputs/hf-course/unit1_mvp_butterflies_seed7_steps100.png`
+- `outputs/hf-course/unit1_mvp_butterflies_seed13_steps100.png`
+- `outputs/hf-course/unit1_pretrained_butterflies_grid.png`
+
+Human review note for issue #7:
+
+- I followed the official Hugging Face Diffusion Course Unit 1 introduction in `notebooks/06_hf_diffusion_unit1_intro.ipynb` while adapting it to this local `uv` project.
+- I loaded the Smithsonian butterflies dataset, preprocessed images into `[batch, 3, 32, 32]` tensors, added noise with `DDPMScheduler`, trained a small `UNet2DModel` to predict noise, and generated samples with `DDPMPipeline`.
+- I inspected the generated sample grid at `outputs/hf-course/unit1_generated_samples_seed0_steps100.png`.
+- Observation: the images display correctly and are recognizable, noisy, butterfly-like images.
+- Parameter tweak: seed-based sample variants are saved under `outputs/hf-course/`; changing the seed changes the generated butterflies while keeping the same `100` inference-step sampling setup.
+- Decision: good enough to continue; the local diffusion workflow runs end to end, even though the tiny training run still produces rough images.
+
 ## Project structure
 
 ```text
